@@ -413,8 +413,8 @@ BOOL MySetHiddenValueKey(HANDLE hKey,char *csName,char *csData,DWORD dwRegType)
 	ANSI_STRING asName;
 	RtlZeroMemory(&asName,sizeof(asName));
 	RtlInitAnsiString(&asName,csName);
-	asName.Length = strlen(csName+1)+1;
-	asName.MaximumLength = strlen(csName+1)+1;
+	asName.Length = strlen(csName+2)+2;
+	asName.MaximumLength = strlen(csName+2)+2;
 	UNICODE_STRING ValueName;
 	RtlZeroMemory(&ValueName,sizeof(ValueName));
 //	RtlAnsiStringToUnicodeString(&ValueName,&asName,TRUE);
@@ -474,8 +474,8 @@ BOOL MyQueryHiddenValueKeyString(HANDLE hKey,char *csName)
 	ANSI_STRING asName;
 	RtlZeroMemory(&asName,sizeof(asName));
 	RtlInitAnsiString(&asName,csName);
-	asName.Length = strlen(csName+1)+1;
-	asName.MaximumLength = strlen(csName+1)+1;
+	asName.Length = strlen(csName+2)+2;
+	asName.MaximumLength = strlen(csName+2)+2;
 	UNICODE_STRING ValueName;
 	RtlZeroMemory(&ValueName,sizeof(ValueName));
 //	RtlAnsiStringToUnicodeString(&ValueName+2,&asName,TRUE);
@@ -556,8 +556,8 @@ BOOL MyDeleteHiddenValueKey(HANDLE hKey,char * csName)
 	ANSI_STRING asName;
 	RtlZeroMemory(&asName,sizeof(asName));
 	RtlInitAnsiString(&asName,csName);
-	asName.Length = strlen(csName+1)+1;
-	asName.MaximumLength = strlen(csName+1)+1;	
+	asName.Length = strlen(csName+2)+2;
+	asName.MaximumLength = strlen(csName+2)+2;	
 	UNICODE_STRING ValueName;
 	RtlZeroMemory(&ValueName,sizeof(ValueName));
 //	RtlAnsiStringToUnicodeString(&ValueName,&asName,TRUE);
